@@ -42,7 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //nav bar links
-let navBar = document.querySelectorAll('a');
+let navBar = document.querySelectorAll('nav a');
 let navLinks = Object.values(siteContent['nav']);
 for (let i =0; i < navBar.length; i++) {
   navBar[i].textContent = navLinks[i]
@@ -98,3 +98,24 @@ contactContent[2].textContent = contactValues[3];
 //footer 
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
+
+//nav text to green
+for (let i = 0; i < navBar.length; i++) {
+  navBar[i].style.color = '#34EBAE';
+}
+
+//adding links to navBar
+const portfolio = document.createElement('a');
+portfolio.textContent = 'Portfolio';
+portfolio.style.color = '#34EBAE';
+const parent = document.querySelector('nav');
+portfolio.href = 'https://jscheuble.github.io';
+
+const twitter = document.createElement('a');
+twitter.textContent = 'Twitter';
+twitter.style.color = '#34EBAE';
+twitter.href= 'https://twitter.com';
+
+parent.appendChild(portfolio);
+parent.prepend(twitter);
+
