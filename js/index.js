@@ -119,3 +119,17 @@ twitter.href= 'https://twitter.com';
 parent.appendChild(portfolio);
 parent.prepend(twitter);
 
+//stretch goal
+
+heading.style.color = '#05079e';
+
+let heads = document.querySelectorAll('h4');
+for (let i = 0; i < heads.length; i++) {
+  heads[i].style.color = '#05079e';
+}
+
+let hover = document.querySelector('.cta button:hover');
+hover.style.background = '#05079e';
+
+let container = document.querySelector('.container');
+container.style.background = '#e4e4eb';
