@@ -40,3 +40,46 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//nav bar links
+let navBar = document.querySelectorAll('a');
+let navLinks = Object.values(siteContent['nav']);
+for (let i =0; i < navBar.length; i++) {
+  navBar[i].textContent = navLinks[i]
+}
+
+//heading 
+let heading = document.querySelector('h1');
+heading.textContent = siteContent['cta']['h1'];
+
+//button
+let btn = document.querySelector('button');
+btn.textContent = siteContent['cta']['button'];
+
+//header image
+let headerImg = document.querySelector('#cta-img');
+headerImg.src = siteContent['cta']['img-src'];
+
+//upper content
+let subHeadings = document.querySelectorAll('.text-content h4');
+let subContent = document.querySelectorAll('.text-content p');
+
+subHeadings[0].textContent = siteContent['main-content']['features-h4'];
+subContent[0].textContent = siteContent['main-content']['features-content'];
+
+subHeadings[1].textContent = siteContent['main-content']['about-h4']
+subContent[1].textContent = siteContent['main-content']['about-content'];
+
+//middle image
+let middleImg = document.querySelector('.middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+//lower content 
+subHeadings[2].textContent = siteContent['main-content']['services-h4'];
+subContent[2].textContent = siteContent['main-content']['services-content'];
+
+subHeadings[3].textContent = siteContent['main-content']['product-h4'];
+subContent[3].textContent = siteContent['main-content']['product-content'];
+
+subHeadings[4].textContent = siteContent['main-content']['vision-h4'];
+subContent[4].textContent = siteContent['main-content']['vision-content'];
